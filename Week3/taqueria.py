@@ -1,3 +1,4 @@
+#Problem Statement:
 """
 One of the most popular places to eat in Harvard Square is Felipe’s Taqueria, which offers a menu of entrees, per the dict below, wherein the value of each key is a price in dollars:
 
@@ -12,8 +13,9 @@ One of the most popular places to eat in Harvard Square is Felipe’s Taqueria, 
     "Taco": 3.00,
     "Tortilla Salad": 8.00
 }
-In a file called taqueria.py, implement a program that enables a user to place an order, prompting them for items, one per line, until the user inputs control-d (which is a common way of ending one’s input to a program). After each inputted item, display the total cost of all items inputted thus far, prefixed with a dollar sign ($) and formatted to two decimal places. Treat the user’s input case insensitively. Ignore any input that isn’t an item. Assume that every item on the menu will be titlecased.
+In a file called taqueria.py, implement a program that enables a user to place an order, prompting them for items, one per line, until the user inputs control-d (which is a common way of ending one's input to a program). After each inputted item, display the total cost of all items inputted thus far, prefixed with a dollar sign ($) and formatted to two decimal places. Treat the user's input case insensitively. Ignore any input that isn't an item. Assume that every item on the menu will be titlecased.
 """
+#Solution:
 
 menu = {
     "Baja Taco": 4.25,
@@ -27,17 +29,14 @@ menu = {
     "Tortilla Salad": 8.00}
 
 def main():
- 
-
-    print(f"${calc():.2f}")
-
-def calc():
+    
     i = 0
     while True:
 
         try:
             x = input("Item: ").title()
             i = i + menu[x]
+            print(f"${i:.2f}")
             
         except KeyError:
             continue    
