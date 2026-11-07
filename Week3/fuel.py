@@ -7,6 +7,7 @@ If, though, X or Y is not an integer, X is greater than Y, or Y is 0, instead pr
 
 
 """
+#SOLUTION
 
 def main():
     while True:
